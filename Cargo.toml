@@ -1,0 +1,16 @@
+[package]
+
+name = "fps_counter"
+version = "0.0.0"
+authors = [
+    "bvssvni <bvssvni@gmail.com>",
+    "eddyb"
+]
+tags = []
+
+[lib]
+
+name = "fps_counter"
+path = "src/lib.rs"
+
+
