@@ -2,7 +2,7 @@
 
 extern crate time;
 
-use std::collections::{ Deque, RingBuf };
+use std::collections::RingBuf;
 
 /// Measures Frames Per Second (FPS).
 pub struct FPSCounter {
