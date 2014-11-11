@@ -27,7 +27,7 @@ impl FPSCounter {
             self.last_second_frames.pop_front();
         }
 
-        self.last_second_frames.push(now);
+        self.last_second_frames.push_back(now);
         self.last_second_frames.len()
     }
 }
