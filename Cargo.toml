@@ -13,4 +13,6 @@ tags = []
 name = "fps_counter"
 path = "src/lib.rs"
 
+[dependencies.time]
 
+git = "http://github.com/rust-lang/time"
