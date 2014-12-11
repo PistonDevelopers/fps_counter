@@ -7,7 +7,7 @@ authors = [
     "eddyb"
 ]
 tags = ["fps", "counter", "frames", "tick"]
-description = "https://github.com/pistondevelopers/fps_counter"
+description = "A Frames Per Second (FPS) counter"
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/pistondevelopers/fps_counter.git"
