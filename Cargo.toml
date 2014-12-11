@@ -18,7 +18,7 @@ homepage = "https://github.com/pistondevelopers/fps_counter"
 name = "fps_counter"
 path = "src/lib.rs"
 
-[dependencies.time]
+[dependencies]
 
-git = "http://github.com/rust-lang/time"
+time = "0.1.1"
 
