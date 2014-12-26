@@ -6,7 +6,7 @@ authors = [
     "bvssvni <bvssvni@gmail.com>",
     "eddyb"
 ]
-tags = ["fps", "counter", "frames", "tick"]
+keywords = ["fps", "counter", "frames", "tick"]
 description = "A Frames Per Second (FPS) counter"
 license = "MIT"
 readme = "README.md"
