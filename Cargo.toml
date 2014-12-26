@@ -20,5 +20,6 @@ path = "src/lib.rs"
 
 [dependencies.time]
 
-git = "http://github.com/rust-lang/time"
+#git = "http://github.com/rust-lang/time"
+version = "*"
 
