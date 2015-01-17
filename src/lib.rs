@@ -19,7 +19,7 @@ impl FPSCounter {
     }
 
     /// Updates the FPSCounter and returns number of frames.
-    pub fn tick(&mut self) -> uint {
+    pub fn tick(&mut self) -> usize {
         let now = time::now().to_timespec();
         let a_second_ago = time::Timespec::new(now.sec - 1, now.nsec);
 
