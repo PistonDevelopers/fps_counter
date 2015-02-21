@@ -2,19 +2,19 @@
 
 extern crate time;
 
-use std::collections::RingBuf;
+use std::collections::VecDeque;
 
 /// Measures Frames Per Second (FPS).
 pub struct FPSCounter {
     /// The last registered frames.
-    last_second_frames: RingBuf<time::Timespec>
+    last_second_frames: VecDeque<time::Timespec>
 }
 
 impl FPSCounter {
     /// Creates a new FPSCounter.
     pub fn new() -> FPSCounter {
         FPSCounter {
-            last_second_frames: RingBuf::with_capacity(128)
+            last_second_frames: VecDeque::with_capacity(128)
         }
     }
 
