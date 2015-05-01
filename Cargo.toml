@@ -1,7 +1,7 @@
 [package]
 
 name = "fps_counter"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
     "bvssvni <bvssvni@gmail.com>",
     "eddyb"
@@ -18,8 +18,7 @@ homepage = "https://github.com/pistondevelopers/fps_counter"
 name = "fps_counter"
 path = "src/lib.rs"
 
-[dependencies.time]
-
-#git = "http://github.com/rust-lang/time"
-version = "*"
+[dependencies.clock_ticks]
+git = "https://github.com/tomaka/clock_ticks"
+#version = "0.0.5"
 
