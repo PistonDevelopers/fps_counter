@@ -1,7 +1,7 @@
 [package]
 
 name = "fps_counter"
-version = "0.1.1"
+version = "0.2.0"
 authors = [
     "bvssvni <bvssvni@gmail.com>",
     "eddyb"
@@ -19,5 +19,5 @@ name = "fps_counter"
 path = "src/lib.rs"
 
 [dependencies]
-clock_ticks = "0.0.6"
+time = "0.1.33"
 

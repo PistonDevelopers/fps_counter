@@ -1,6 +1,6 @@
 //! A Frames Per Second counter.
 
-extern crate clock_ticks;
+extern crate time;
 
 use std::collections::VecDeque;
 
@@ -20,7 +20,7 @@ impl FPSCounter {
 
     /// Updates the FPSCounter and returns number of frames.
     pub fn tick(&mut self) -> usize {
-        let now = clock_ticks::precise_time_ns();
+        let now = time::precise_time_ns();
         let a_second_ago = now - 1_000_000_000;
 
         while self.last_second_frames.front().map_or(false, |t| *t < a_second_ago) {
