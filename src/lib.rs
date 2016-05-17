@@ -1,13 +1,12 @@
 //! A Frames Per Second counter.
 
-extern crate time;
-
 use std::collections::VecDeque;
+use std::time::{Duration, Instant};
 
 /// Measures Frames Per Second (FPS).
 pub struct FPSCounter {
     /// The last registered frames.
-    last_second_frames: VecDeque<u64>
+    last_second_frames: VecDeque<Instant>
 }
 
 impl FPSCounter {
@@ -20,8 +19,8 @@ impl FPSCounter {
 
     /// Updates the FPSCounter and returns number of frames.
     pub fn tick(&mut self) -> usize {
-        let now = time::precise_time_ns();
-        let a_second_ago = now - 1_000_000_000;
+        let now = Instant::now();
+        let a_second_ago = now - Duration::from_secs(1);
 
         while self.last_second_frames.front().map_or(false, |t| *t < a_second_ago) {
             self.last_second_frames.pop_front();

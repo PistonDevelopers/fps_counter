@@ -18,6 +18,3 @@ homepage = "https://github.com/pistondevelopers/fps_counter"
 name = "fps_counter"
 path = "src/lib.rs"
 
-[dependencies]
-time = "0.1.33"
-
