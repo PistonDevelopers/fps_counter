@@ -4,9 +4,16 @@ use std::collections::VecDeque;
 use std::time::{Duration, Instant};
 
 /// Measures Frames Per Second (FPS).
+#[derive(Debug)]
 pub struct FPSCounter {
     /// The last registered frames.
     last_second_frames: VecDeque<Instant>
+}
+
+impl Default for FPSCounter {
+    fn default() -> Self {
+        FPSCounter::new()
+    }
 }
 
 impl FPSCounter {
