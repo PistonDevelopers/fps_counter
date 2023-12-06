@@ -14,3 +14,10 @@ homepage = "https://github.com/pistondevelopers/fps_counter"
 
 name = "fps_counter"
 path = "src/lib.rs"
+
+[features]
+stdweb = ["instant/stdweb"]
+wasm-bindgen = ["instant/wasm-bindgen"]
+
+[dependencies.instant]
+version = "0.1.12"

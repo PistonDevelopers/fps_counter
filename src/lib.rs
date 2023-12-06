@@ -1,7 +1,7 @@
 //! A Frames Per Second counter.
-
-use std::collections::VecDeque;
-use std::time::{Duration, Instant};
+extern crate instant;
+use instant::Instant;
+use std::{collections::VecDeque, time::Duration};
 
 /// Measures Frames Per Second (FPS).
 #[derive(Debug)]
