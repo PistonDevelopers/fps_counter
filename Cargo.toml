@@ -2,10 +2,7 @@
 
 name = "fps_counter"
 version = "2.0.0"
-authors = [
-    "bvssvni <bvssvni@gmail.com>",
-    "eddyb"
-]
+authors = ["bvssvni <bvssvni@gmail.com>", "eddyb"]
 keywords = ["fps", "counter", "frames", "tick", "piston"]
 description = "A Frames Per Second (FPS) counter"
 license = "MIT"
@@ -17,4 +14,3 @@ homepage = "https://github.com/pistondevelopers/fps_counter"
 
 name = "fps_counter"
 path = "src/lib.rs"
-
