@@ -1,13 +1,13 @@
 //! A Frames Per Second counter.
-
-use std::collections::VecDeque;
-use std::time::{Duration, Instant};
+extern crate instant;
+use instant::Instant;
+use std::{collections::VecDeque, time::Duration};
 
 /// Measures Frames Per Second (FPS).
 #[derive(Debug)]
 pub struct FPSCounter {
     /// The last registered frames.
-    last_second_frames: VecDeque<Instant>
+    last_second_frames: VecDeque<Instant>,
 }
 
 impl Default for FPSCounter {
@@ -20,7 +20,7 @@ impl FPSCounter {
     /// Creates a new FPSCounter.
     pub fn new() -> FPSCounter {
         FPSCounter {
-            last_second_frames: VecDeque::with_capacity(128)
+            last_second_frames: VecDeque::with_capacity(128),
         }
     }
 
@@ -29,7 +29,11 @@ impl FPSCounter {
         let now = Instant::now();
         let a_second_ago = now - Duration::from_secs(1);
 
-        while self.last_second_frames.front().map_or(false, |t| *t < a_second_ago) {
+        while self
+            .last_second_frames
+            .front()
+            .map_or(false, |t| *t < a_second_ago)
+        {
             self.last_second_frames.pop_front();
         }
 
