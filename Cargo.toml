@@ -1,7 +1,7 @@
 [package]
 
 name = "fps_counter"
-version = "2.0.0"
+version = "3.0.0"
 authors = ["bvssvni <bvssvni@gmail.com>", "eddyb"]
 keywords = ["fps", "counter", "frames", "tick", "piston"]
 description = "A Frames Per Second (FPS) counter"
